@@ -86,14 +86,14 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ToDoDbContext>();
     dbContext.Database.EnsureCreated();
-    // if (!dbContext.Items.Any())
-    // {
-    //     dbContext.Items.AddRange(
-    //         new Item { Name = "Task 1", IsComplete = false },
-    //         new Item { Name = "Task 2", IsComplete = true }
-    //     );
-    //     dbContext.SaveChanges();
-    // }
+    if (!dbContext.Items.Any())
+    {
+        dbContext.Items.AddRange(
+            new Item { Name = "Task 1", IsComplete = false },
+            new Item { Name = "Task 2", IsComplete = true }
+        );
+        dbContext.SaveChanges();
+    }
 }
 
 app.MapGet("/", () => "ToDoApi is running!");
