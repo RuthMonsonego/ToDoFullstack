@@ -12,7 +12,8 @@ axios.interceptors.response.use(
   }
 );
 
-export default {
+// יצירת אובייקט service
+const apiService = {
   // פונקציה לשאיבת כל המשימות
   getTasks: async () => {
     try {
@@ -38,7 +39,7 @@ export default {
   // פונקציה לעדכון מצב המשימה (האם הושלמה או לא)
   setCompleted: async (id, isComplete) => {
     try {
-      const result = await axios.put(`/items/${id}`, { isComplete }); // שימוש ב-`
+      const result = await axios.put(`/items/${id}`, { isComplete });
       return result.data;
     } catch (error) {
       console.error('Failed to update task:', error);
@@ -49,7 +50,7 @@ export default {
   // פונקציה למחיקת משימה
   deleteTask: async (id) => {
     try {
-      const result = await axios.delete(`/items/${id}`); // שימוש ב-`
+      const result = await axios.delete(`/items/${id}`);
       return result.data;
     } catch (error) {
       console.error('Failed to delete task:', error);
@@ -57,3 +58,6 @@ export default {
     }
   }
 };
+
+// יצוא האובייקט apiService
+export default apiService;
