@@ -22,11 +22,9 @@ yarn-error.log*
 Thumbs.db
 
 # Dependency directories
-/bin/
+TodoApi/bin/
 /obj/
-/packages/
-/TodoApi/bin/Debug/net8.0
-/TodoApi/bin/Debug/net9.0
+TodoApi/obj/
 
 # Visual Studio specific files
 *.user
