@@ -7,6 +7,7 @@ function App() {
 
   async function getTodos() {
     const todos = await service.getTasks();
+    console.log(todos,"11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
     setTodos(todos);
   }
 

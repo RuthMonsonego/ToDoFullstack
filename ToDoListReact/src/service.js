@@ -18,6 +18,7 @@ const apiService = {
   getTasks: async () => {
     try {
       const result = await axios.get('/items');
+      console.log(result.data ,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
       return result.data;
     } catch (error) {
       console.error('Failed to fetch tasks:', error);
