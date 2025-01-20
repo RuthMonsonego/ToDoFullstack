@@ -25,6 +25,8 @@ Thumbs.db
 /bin/
 /obj/
 /packages/
+/TodoApi/bin/Debug/net8.0
+/TodoApi/bin/Debug/net9.0
 
 # Visual Studio specific files
 *.user
